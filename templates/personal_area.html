@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block style %}
+<link href="static/css/style_personal.css" rel="stylesheet">
+{% endblock %}
+{% block body %}
+{% if current_user.is_authenticated %}
+    <div align="right"><a class="btn btn-success" href="/logout">Выйти</a></div>
+{% endif %}
+<h1 align="center" style="color: #ffffff">Личный кабинет</h1>
+<div class="text-block_backg">
+<br>
+<div class="text-block_1" role="alert"><img src={{name_file}} alt="Картинка" class="avatar" style="float:left"></div>
+<br>
+<div class="text-block_2" role="alert" style="float:left; color: #ffffff; margin-left: 300px"><h4>Загрузите себе аватар</h4></div>
+<div class="text-block" role="alert" style="float:left">
+    <form method="POST" enctype="multipart/form-data" name="authorization" action="http://127.0.0.1:8000/personal_area">
+    <input type="file" name="file_ava" accept="image/jpeg,image/png">
+    <input type="submit" value="Использовать">
+</form></div>
+<div class="text-block_3" role="alert" style="color: #ffffff"><h4>Никнейм: {{ current_user.name }}</h4></div>
+<div class="text-block_3" role="alert" style="color: #ffffff"><h4>Привязанная почта: {{ current_user.email }}</h4></div>
+<div class="text-block_3" role="alert" style="color: #ffffff"><h4>Игровой рейтинг: {{ current_user.pts }}</h4></div>
+<div class="text-block_3" role="alert" style="color: #ffffff"><h4>Основная роль: {{ current_user.role }}</h4></div></div>
+{% endblock %}

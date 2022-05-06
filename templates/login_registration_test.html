@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block style %}
+<link href="static/css/style_register_login.css" rel="stylesheet">
+{% endblock %}
+{% block body %}
+<h1 style="color: #ffffff" align="center">Регистрация</h1>
+<br>
+<div><br><form action="" method="post">
+    {{ form.hidden_tag() }}
+    <center>
+    <p>
+        {{ form.email.label (style="color: #ffffff") }}<br>
+        {{ form.email(class="form-control", style="width:800px", type="email") }}<br>
+        {% for error in form.email.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p></center>
+    <center>
+    <p>
+        {{ form.password.label (style="color: #ffffff") }}<br>
+        {{ form.password(class="form-control", style="width:800px", type="password") }}<br>
+        {% for error in form.password.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+        </p></center>
+    <center>
+    <p>
+        {{ form.password_again.label (style="color: #ffffff") }}<br>
+        {{ form.password_again(class="form-control", style="width:800px", type="password") }}<br>
+        {% for error in form.password_again.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p></center>
+    <center>
+    <p>
+        {{ form.name.label (style="color: #ffffff") }}<br>
+        {{ form.name(class="form-control", style="width:800px") }}<br>
+        {% for error in form.name.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p></center>
+    <center>
+    <p>
+        {{ form.role.label(style="color: #ffffff") }}<br>
+        {{ form.role(class="form-control", style="height:50px; width:800px") }}<br>
+        {% for error in form.role.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p></center>
+    <center>
+    <p>
+        {{ form.pts.label(style="color: #ffffff") }}<br>
+        {{ form.pts(class="form-control", style="height:50px; width:800px") }}<br>
+        {% for error in form.pts.errors %}
+            <p class="alert alert-danger" role="alert">
+                {{ error }}
+            </p>
+        {% endfor %}
+    </p></center>
+    <center><p>{{ form.submit(type="submit", class="btn btn-primary", style="height:80px; width:350px") }}</p>
+    {{message}}</center>
+</form></div>
+{% endblock %}

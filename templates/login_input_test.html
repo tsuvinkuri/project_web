@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block style %}
+<link href="static/css/style_register_login.css" rel="stylesheet">
+{% endblock %}
+{% block body %}
+    <h1 style="color: #ffffff" align="center">Авторизация</h1>
+<br>
+    <div style="width: 950px;	height: 600px;
+    outline: 2px solid #000;
+    background: #008000;
+    border: 5px solid #fff;
+    border-radius: 10px;
+    margin-left: 475px">
+        <br><form action="" method="post">
+        {{ form.hidden_tag() }}
+        <center>
+        <p>
+            {{ form.email.label (style="color: #ffffff") }}<br>
+            {{ form.email(class="form-control", style="width:800px", type="email", type="email") }}<br>
+            {% for error in form.email.errors %}
+                <p> class="alert alert-danger" role="alert">
+                    {{ error }}
+                </p>
+            {% endfor %}
+        </p></center>
+        <center>
+        <p>
+            {{ form.password.label (style="color: #ffffff") }}<br>
+            {{ form.password(class="form-control", style="width:800px", type="email", type="password") }}<br>
+            {% for error in form.password.errors %}
+                <p> class="alert alert-danger" role="alert">
+                    {{ error }}
+                </p>
+            {% endfor %}
+        </p></center>
+        <center>
+        <p>{{ form.remember_me() }} {{ form.remember_me.label (style="color: #ffffff") }}</p></center>
+        <center><p>{{ form.submit(type="submit", class="btn btn-primary", style="height:80px; width:350px") }}</p>
+        <p>{{ message }}</p></center>
+    </form></div>
+{% endblock %}

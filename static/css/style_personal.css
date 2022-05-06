@@ -1,0 +1,32 @@
+.avatar {
+    vertical-align: middle;
+    width: 500px;
+    height: 500px;
+    border-radius: 90%;
+}
+.text-block {
+margin-left:220px;
+margin-right:800px
+}
+.text-block_2 {
+margin-left:320px;
+margin-right:800px
+}
+.text-block_1 {
+margin-left:165px;
+margin-top:100px;
+margin-right:250px
+}
+.text-block_3 {
+margin-left:900px;
+margin-top:50px;
+margin-right:250px
+}
+.text-block_backg {width: 1600px;	height: 800px;
+    outline: 2px solid #000;
+    background: #42aaff;
+    border: 5px solid #fff;
+    border-radius: 10px;
+    margin-left: 150px;
+    margin-top: 50px;
+    }

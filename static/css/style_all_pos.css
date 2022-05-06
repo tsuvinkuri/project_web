@@ -1,0 +1,19 @@
+.text-block_text {
+margin-left:100px;
+margin-right:800px
+}
+.thumb img  {
+    border: 2px solid #000000;
+    padding: 0px;
+    background: #666;
+    margin-right: 10px;
+    margin-bottom: 10px;
+   }
+.text-block_src {
+margin-left:100px;
+margin-right:600px
+}
+.text-block_ss {
+float:right;
+margin-right:5000px
+}

@@ -1,0 +1,19 @@
+.text-block {
+margin-left:100px;
+margin-right:800px
+}
+.text-block_1 {
+margin-left:250px;
+margin-right:250px
+}
+.text-block_ss {
+float:right;
+margin-right:300px
+}
+.text-block_backg {width: 180px;	height: 400px;
+    outline: 2px solid #000;
+    background: #ffffff;
+    border: 5px solid #fff;
+    border-radius: 10px;
+    margin-left: 150px;
+    }
